@@ -38,5 +38,12 @@ vingadores.dar_likes()
 atlanta.dar_likes()
 atlanta.dar_likes()
 
-print(f'Nome: {vingadores.nome} - Likes: {vingadores.likes}')
-print(f'Nome: {atlanta.nome} - Likes: {atlanta.likes}')
+listinha = [atlanta, vingadores]
+
+for programa in listinha:
+    if hasattr(programa, 'duracao'):
+        detalhe = f'{programa.duracao} min'
+    else:
+        detalhe = f'{programa.temporadas} temporadas'
+
+    print(f'Nome: {programa.nome} - {detalhe} - Likes: {programa.likes}')
